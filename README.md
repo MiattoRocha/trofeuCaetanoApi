@@ -4,8 +4,8 @@ Exemplo de jogos suportados: Term.ooo e Letreco.
 
 # Banco de dados
 Precisaremos de 3 tabelas, pelo menos por enquanto, para registrar os dados da aplicação do Troféu Caetano.
-Jogadores - terá ID, Nome e Foto*
-Jogo - terá ID, Nome e Icone*
+Jogadores - terá ID, Nome e Foto
+Jogo - terá ID, Nome e Icone
 Apontamentos - Terá ID, IDJogador, IDJogo e Tentativas
 
 # Arquitetura
