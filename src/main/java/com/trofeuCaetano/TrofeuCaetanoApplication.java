@@ -1,4 +1,4 @@
-package com.trofeuCaetano.demo;
+package com.trofeuCaetano;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
