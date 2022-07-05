@@ -1,13 +1,12 @@
-package com.trofeuCaetano.demo.Models;
+package com.trofeuCaetano.Models;
 
-import jdk.jfr.Enabled;
-
-import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.Column;
 
-@Enabled
+@Entity
 public class Jogo {
 
     @Id
@@ -15,7 +14,7 @@ public class Jogo {
     private Integer idJogo;
 
     @Column(nullable = false)
-    private String nomeJogo;
+    private String nome;
 
     @Column(nullable = false)
     private String icone;
