@@ -1,5 +1,7 @@
 package com.trofeuCaetano.Models;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
@@ -7,12 +9,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Column;
 import javax.persistence.ManyToOne;
 import javax.persistence.JoinColumn;
+import java.util.Date;
+
 @Entity
 public class Apontamento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idApontamento;
+
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
+    @Column(columnDefinition = "date", nullable = false)
+    private Date data;
 
     @Column(nullable = false)
     private Integer tentativas;
@@ -55,5 +63,13 @@ public class Apontamento {
 
     public void setJogo(Jogo jogo) {
         this.jogo = jogo;
+    }
+
+    public Date getData() {
+        return data;
+    }
+
+    public void setData(Date data) {
+        this.data = data;
     }
 }
